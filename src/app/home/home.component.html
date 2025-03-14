@@ -1,0 +1,447 @@
+<div class="portfolio-container">
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-content">
+      <a href="#" class="nav-logo">
+        <span class="logo-text">Twalibu</span>
+        <span class="logo-dot">.</span>
+      </a>
+      <button class="mobile-menu-toggle" (click)="toggleMobileMenu()">
+        <mat-icon>{{ isMenuOpen ? "close" : "menu" }}</mat-icon>
+      </button>
+      <div class="nav-links" [class.active]="isMenuOpen">
+        <a href="#about" (click)="closeMobileMenu()">About</a>
+        <a href="#skills" (click)="closeMobileMenu()">Skills</a>
+        <a href="#projects" (click)="closeMobileMenu()">Projects</a>
+        <a href="#api" (click)="closeMobileMenu()">API</a>
+        <a href="#certifications" (click)="closeMobileMenu()">Certifications</a>
+        <a href="#education" (click)="closeMobileMenu()">Education</a>
+        <a href="#contact" (click)="closeMobileMenu()">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Backdrop -->
+  <div
+    class="mobile-menu-backdrop"
+    [class.active]="isMenuOpen"
+    (click)="closeMobileMenu()"
+  ></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="animated-text">Welcome to My Portfolio</div>
+        <h1>I'm Twalibu</h1>
+        <p>Full Stack Developer</p>
+      </div>
+      <div class="hero-image">
+        <img src="assets/images/twalibu.jpg" alt="Twalibu's Profile Picture" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <div class="section-content about-content">
+      <div class="about-text">
+        <p class="intro">
+          I am a Full Stack Developer with expertise in modern web technologies
+          and a strong foundation in computer science.
+        </p>
+
+        <p class="details">
+          As a graduate from the University of Dar es Salaam College of
+          Information Technology with a BSc in Computer Science, I specialize in
+          building robust web applications using:
+        </p>
+
+        <div class="core-skills">
+          <div class="skill-pill">C#</div>
+          <div class="skill-pill">ASP.NET Core</div>
+          <div class="skill-pill">Angular</div>
+        </div>
+
+        <p class="expertise">
+          My expertise lies in developing scalable web applications using the
+          .NET ecosystem and modern frontend frameworks. I combine my strong
+          theoretical computer science background with practical development
+          experience to create efficient and user-friendly solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="section-content skills-grid">
+      <div class="skill-category">
+        <h3>Frontend</h3>
+        <ul>
+          <li>Angular</li>
+          <li>TypeScript</li>
+          <li>HTML5/CSS3</li>
+          <li>JavaScript</li>
+          <li>Bootstrap</li>
+          <li>Material UI</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Backend</h3>
+        <ul>
+          <li>C#</li>
+          <li>ASP.NET Core</li>
+          <li>Web API</li>
+          <li>Entity Framework</li>
+          <li>RESTful Services</li>
+          <li>LINQ</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Database & Tools</h3>
+        <ul>
+          <li>SQL Server</li>
+          <li>PostgreSQL</li>
+          <li>MySQL</li>
+          <li>Git</li>
+          <li>Visual Studio</li>
+          <li>VS Code</li>
+          <li>Azure DevOps</li>
+          <li>Postman</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="section-content projects-grid">
+      <!-- Construction Budget Management System -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Construction Budget Management System</h3>
+          <span class="project-type">Final Year Project</span>
+        </div>
+        <div class="project-content">
+          <div class="project-role"><strong>Role:</strong> Developer</div>
+          <div class="project-tech">
+            <strong>Technologies:</strong>
+            <div class="tech-stack">
+              <span class="tech-pill">ASP.NET Core MVC</span>
+              <span class="tech-pill">MS SQL</span>
+            </div>
+          </div>
+          <p class="project-description">
+            Developed a web-based application to manage and track construction
+            project budgets. Added features for budget tracking, report
+            generation, and user authentication.
+          </p>
+        </div>
+      </div>
+
+      <!-- Property Management System -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Property Management System</h3>
+        </div>
+        <div class="project-content">
+          <div class="project-role"><strong>Role:</strong> Developer</div>
+          <div class="project-tech">
+            <strong>Technologies:</strong>
+            <div class="tech-stack">
+              <span class="tech-pill">ASP.NET Core MVC</span>
+              <span class="tech-pill">MS SQL</span>
+            </div>
+          </div>
+          <p class="project-description">
+            Developed a web-based application that manages various properties.
+          </p>
+          <a
+            href="https://projzote.bblockapps.com/"
+            target="_blank"
+            class="project-link"
+          >
+            <mat-icon>launch</mat-icon>
+            View Project
+          </a>
+        </div>
+      </div>
+
+      <!-- One Click -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3>One Click</h3>
+          <span class="project-status">In Development</span>
+        </div>
+        <div class="project-content">
+          <div class="project-role"><strong>Role:</strong> Developer</div>
+          <div class="project-tech">
+            <strong>Technologies:</strong>
+            <div class="tech-stack">
+              <span class="tech-pill">ASP.NET Core Web API</span>
+              <span class="tech-pill">Angular</span>
+            </div>
+          </div>
+          <p class="project-description">
+            Currently developing the backend using ASP.NET Core Web API and
+            consuming APIs with Angular for the frontend.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REST API Section -->
+  <section id="api" class="section">
+    <h2>REST API Showcase</h2>
+    <div class="section-content api-showcase">
+      <div class="api-intro">
+        <p>
+          Experienced in building robust and scalable RESTful APIs using ASP.NET
+          Core Web API. My APIs follow industry best practices including:
+        </p>
+      </div>
+
+      <div class="api-features">
+        <div class="feature-card">
+          <mat-icon>security</mat-icon>
+          <h3>Security</h3>
+          <ul>
+            <li>JWT Authentication</li>
+            <li>Role-based Authorization</li>
+            <li>API Key Authentication</li>
+            <li>HTTPS Implementation</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <mat-icon>architecture</mat-icon>
+          <h3>Architecture</h3>
+          <ul>
+            <li>Clean Architecture</li>
+            <li>Repository Pattern</li>
+            <li>SOLID Principles</li>
+            <li>Dependency Injection</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <mat-icon>api</mat-icon>
+          <h3>API Design</h3>
+          <ul>
+            <li>RESTful Conventions</li>
+            <li>Swagger Documentation</li>
+            <li>Versioning</li>
+            <li>DTOs for Data Transfer</li>
+          </ul>
+        </div>
+
+        <div class="feature-card">
+          <mat-icon>speed</mat-icon>
+          <h3>Performance</h3>
+          <ul>
+            <li>Caching Strategies</li>
+            <li>Async/Await Patterns</li>
+            <li>Query Optimization</li>
+            <li>Response Compression</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="section">
+    <h2>Certifications</h2>
+    <div class="section-content certifications-grid">
+      <div class="certification-card">
+        <div class="certification-logo">
+          <mat-icon>verified</mat-icon>
+        </div>
+        <div class="certification-content">
+          <h3>Foundational C# with Microsoft</h3>
+          <div class="certification-issuer">
+            <span class="issuer">FreeCodeCamp Certification</span>
+            <a
+              href="https://www.freecodecamp.org/certification/fccb1d0e26f-9206-4ef0-8c7e-773b893cda30/foundational-c-sharp-with-microsoft"
+              target="_blank"
+              class="verify-link"
+            >
+              <mat-icon>launch</mat-icon>
+              Verify Certificate
+            </a>
+          </div>
+          <div class="certification-skills">
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">.NET</span>
+            <span class="skill-tag">Microsoft</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <h2>Education</h2>
+    <div class="section-content education-timeline">
+      <!-- BSc Computer Science -->
+      <div class="education-card">
+        <div class="education-year">2021 - 2024</div>
+        <div class="education-content">
+          <h3>BSc in Computer Science</h3>
+          <div class="institution">University of Dar es Salaam</div>
+          <div class="education-type">Degree</div>
+        </div>
+      </div>
+
+      <!-- Advanced Level -->
+      <div class="education-card">
+        <div class="education-year">2019 - 2021</div>
+        <div class="education-content">
+          <h3>Advanced Level</h3>
+          <div class="institution">Mtwara Technical Secondary School</div>
+          <div class="education-type">Secondary Education</div>
+        </div>
+      </div>
+
+      <!-- Ordinary Level -->
+      <div class="education-card">
+        <div class="education-year">2015 - 2018</div>
+        <div class="education-content">
+          <h3>Ordinary Level</h3>
+          <div class="institution">Mirereni B W Mkapa Secondary School</div>
+          <div class="education-type">Secondary Education</div>
+        </div>
+      </div>
+
+      <!-- Primary Education -->
+      <div class="education-card">
+        <div class="education-year">2008 - 2014</div>
+        <div class="education-content">
+          <h3>Primary Education</h3>
+          <div class="institution">Shule ya Msingi Mirerani</div>
+          <div class="education-type">Primary Education</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <div class="section-content contact-container">
+      <div class="contact-card">
+        <div class="contact-header">
+          <h3>Get in Touch</h3>
+          <p class="contact-intro">
+            Feel free to reach out for collaborations or inquiries
+          </p>
+        </div>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <mat-icon>person</mat-icon>
+            <div class="detail">
+              <span class="label">Name</span>
+              <span class="value">Twalibu Mohamedi Ismail</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <mat-icon>phone</mat-icon>
+            <div class="detail">
+              <span class="label">Phone</span>
+              <a href="tel:+255746555500" class="value">+255 746 555 500</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <mat-icon>email</mat-icon>
+            <div class="detail">
+              <span class="label">Email</span>
+              <a href="mailto:itwalibu87@gmail.com" class="value"
+                >itwalibu87&#64;gmail.com</a
+              >
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <mat-icon>location_on</mat-icon>
+            <div class="detail">
+              <span class="label">Address</span>
+              <span class="value">11 Msikitini, Msasani-Dar es Salaam</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <mat-icon>flag</mat-icon>
+            <div class="detail">
+              <span class="label">Nationality</span>
+              <span class="value">Tanzanian</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Referees Section -->
+  <section id="referees" class="section">
+    <h2>Referees</h2>
+    <div class="section-content referees-grid">
+      <!-- First Referee -->
+      <div class="referee-card">
+        <div class="referee-icon">
+          <mat-icon>person</mat-icon>
+        </div>
+        <div class="referee-content">
+          <h3>Seleman A Kawanga</h3>
+          <div class="referee-details">
+            <div class="referee-item">
+              <mat-icon>work</mat-icon>
+              <span>Msimamizi wa majengo GSM</span>
+            </div>
+            <div class="referee-item">
+              <mat-icon>phone</mat-icon>
+              <a href="tel:+255713025531">+255 713 025 531</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Referee -->
+      <div class="referee-card">
+        <div class="referee-icon">
+          <mat-icon>person</mat-icon>
+        </div>
+        <div class="referee-content">
+          <h3>Said M Omary</h3>
+          <div class="referee-details">
+            <div class="referee-item">
+              <mat-icon>work</mat-icon>
+              <span>Software Developer</span>
+            </div>
+            <div class="referee-item">
+              <mat-icon>phone</mat-icon>
+              <a href="tel:+255677087716">+255 677 087 716</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button
+    class="back-to-top"
+    [class.visible]="showBackToTop"
+    (click)="scrollToTop()"
+  >
+    <mat-icon>arrow_upward</mat-icon>
+  </button>
+</div>
